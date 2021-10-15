@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scolarship form</title>
+    <style>
+        .slidecontainer {
+          width: 100%;
+        }
+        
+        .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 15px;
+          border-radius: 5px;
+          background: #d3d3d3;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+        }
+        
+        .slider:hover {
+          opacity: 1;
+        }
+        
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer;
+        }
+        body{
+            border: 3px solid black;
+            padding: 15px;
+            margin: 150px;
+            background-image: url("FORM\ BACK.jpg");
+            background-size: cover;
+        }
+        legend{
+            font-size: x-large;
+        }
+        
+        </style>
+</head>
+<body>
+    <TABLE>
+        <TR>
+    <form action="scolarship.php" method="POST" target="_blank" autocomplete="on" novalidate>
+        
+           <h1><center><u><b>Acharya Institute Of Technology </b></u></center></h1>
+           <p style="text-align: center;margin: 0px;">Flat 3,Archit Nagar,<br>Soldevanahalli, Bangalore,<br>PIN-560107, Karnataka.
+           </p>
+        <h2><u><b><center>Scolarship form</center> </b></u></h2>
+        <fieldset>
+            <legend>
+                <u><b>Personal information</b></u>
+            </legend><br><br>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for ="mname" >Middle name </label>
+            <input type="text" id="mname" name="mname">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="XXXXXXXXXX" required  >
+            <label for="phone"> alternate phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="XXXXXXXXXX"><br><br>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="gender">gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+            <label for="datemax">Enter a date of birth  </label>
+            <input type="date" id="datemax" name="datemax" min="2003-03-17"><br><BR>
+            <label for="age">Age</label>
+            <input type="number" min="18"><br>
+            <br>
+            
+        </fieldset>
+        <fieldset>
+            <legend><u><b>Other information</b></u></legend>
+             Father name<br>
+            <label for="faname">First name </label>
+            <input type="text" id="faname" name="faname"> 
+            <label for="maname">Middle name</label>
+            <input type="text" id="maname" name="maname">
+            <label for="laname">Last name</label>
+            <input type="text" id="laname" name="laname"><br><br>
+            <label for="phone">Father's Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="XXXXXXXXXX">
+            <label for="phone"> Alternate Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="XXXXXXXXXX"><br><br>
+            <label for="email">Father's email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            Income
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="300000" value="50" class="slider" id="myRange">
+                  <p>Value: <span id="demo"></span></p>
+                </div>
+                
+                <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+
+
+        </fieldset>
+        <fieldset>
+            <legend><U><B>Education</B></U></legend>
+            <label for="cname">Collage name</label>
+            <input type="text" id="cname" size="150"><br><br>
+            
+            <fieldset>
+                <legend>College address</legend>
+                <label for="address">Address </label><br>
+                <input type="text" id="address" name="address" placeholder="ADDRESS LINE 1"size="100" required><br>
+                <input type="text" id="address" name="address" placeholder="ADDRESS LINE 2"size="100"><BR>
+                <input type="text" id="address" name="address" placeholder="ADDRESS LINE 3"size="100"><BR>
+                <input type="text" id="address" name="address" placeholder="LANDMARK" size="100"><BR><br>
+                <label for ="pincode">Pin code</label>
+                <input type="number" id="pincode" name="pincode"min="560001" max="560100" pattern="560[0-9]{3}" placeholder="XXXXXX" required>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Bangaluru" required>
+                <label for="state">State</label>
+                <input type="text" id="state" name="state"placeholder="Karnataa" required>
+            </fieldset>  <BR><BR>
+            <label for="cgpa">CGPA</label>
+            <input type="number" step="0.04" max="10" min="1" >  
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <label for="address">Address </label><br>
+            <input type="text" id="address" name="address" placeholder="ADDRESS LINE 1"size="100" required><br>
+            <input type="text" id="address" name="address" placeholder="ADDRESS LINE 2"size="100"><BR>
+            <input type="text" id="address" name="address" placeholder="ADDRESS LINE 3"size="100"><BR>
+            <input type="text" id="address" name="address" placeholder="LANDMARK" size="100"><BR><br>
+            <label for ="pincode">Pin code</label>
+            <input type="number" id="pincode" name="pincode"min="560001" max="560100" pattern="560[0-9]{3}" placeholder="XXXXXX" required>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Bangaluru" required>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state"placeholder="Karnataka" required>
+
+        </fieldset>
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="myfile">Upload Adhaar Card Front:</label>
+            <input type="file" id="myfile" name="myfile">
+            <label for="myfile">Upload Adhaar Card Back:</label>
+            <input type="file" id="myfile" name="myfile">
+        </fieldset>
+           <br><br>
+           <label for="pwd"> Enter new Password</label>
+        <input type="password" id="pwd" name="pwd"><br>
+        <label for="pwd">Confirm password : </label>
+        <input type="password" id="pwd" name="pwd"><br><br><br>
+           <input type="checkbox" id="term" name="term" value="term">
+           <label for="term">click yes if you agree with term and condition to read full term and condition visit-<a href="term.html">more term and condition</a</label><br><br><br>
+            <center><input type="submit" value="Confirm">
+            <input type="reset"> <br></center>
+    </form>
+    </TR>
+    </TABLE>
+</body>
+</html>
